@@ -1,6 +1,6 @@
 # Mini Banking / Open Banking Consent Management System
 
-Banfico Full Stack Developer Selection Project.
+Banfico Full Stack Developer Project.
 
 ## Tech Stack
 
