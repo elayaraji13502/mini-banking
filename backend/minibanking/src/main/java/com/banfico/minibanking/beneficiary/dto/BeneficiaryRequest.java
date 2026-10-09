@@ -1,0 +1,68 @@
+package com.banfico.minibanking.beneficiary.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
+public class BeneficiaryRequest {
+
+    @NotNull(message = "Customer ID is required")
+    private Long customerId;
+
+    @NotBlank(message = "Beneficiary name is required")
+    @Size(
+            max = 100,
+            message = "Beneficiary name must not exceed 100 characters"
+    )
+    private String name;
+
+    @NotBlank(message = "Account number is required")
+    @Size(
+            min = 10,
+            max = 20,
+            message = "Account number must contain 10 to 20 characters"
+    )
+    private String accountNumber;
+
+    @NotBlank(message = "Bank name is required")
+    @Size(
+            max = 100,
+            message = "Bank name must not exceed 100 characters"
+    )
+    private String bankName;
+
+    public BeneficiaryRequest() {
+    }
+
+    public Long getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public String getBankName() {
+        return bankName;
+    }
+
+    public void setBankName(String bankName) {
+        this.bankName = bankName;
+    }
+}
